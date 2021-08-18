@@ -33,6 +33,6 @@ echo "Hello $name";     // prints Hello Josep
 echo "Hello {$name}";   // prints Hello Josep -> recommended
 echo 'Hello ' . $name;  // prints Hello Josep
 
-
-
-
+echo "\n"; // line break
+// https://misc.flogisoft.com/bash/tip_colors_and_formatting
+echo "\033[33m- some colored text \033[0m some white text \n"; // print with color (terminal)
