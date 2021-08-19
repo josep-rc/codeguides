@@ -16,6 +16,7 @@ echo 'Hello', ' ', 'World'; // prints Hello World
 
 echo 'Josep\'s invoice';    // prints Josep's invoice
 echo "Josep's invoice";     // prints Josep's invoice
+
 // variable
 $name = 'Josep';            // variable names can start with letters or _
 echo $name;                 // prints Josep
@@ -36,3 +37,32 @@ echo 'Hello ' . $name;  // prints Hello Josep
 echo "\n"; // line break
 // https://misc.flogisoft.com/bash/tip_colors_and_formatting
 echo "\033[33m- some colored text \033[0m some white text \n"; // print with color (terminal)
+
+// Constants
+const STATUS = 'paid';
+// or
+define('MY_NAME', 'Josep');
+$is_name_defined = defined('MY_NAME'); // true
+// PHP constants
+echo PHP_VERSION . "\n";    // 8.0.7
+echo __LINE__ . "\n";       // 10
+
+// Variable variables
+$foo  = 'bar';              // dynamic types
+$$foo = 'baz';              // same as $bar = 'baz';
+echo "$foo, {$$foo}\n";     // bar, baz
+echo "$foo, ${$foo}";       // bar, baz
+
+// array
+$data = [1, 2, "Hello", true, 0.8];
+print_r($data); // Array([0]=>1 [1]=>2 [2]=>Hello [3]=>1 [4]=>0.8)
+
+// juggling: a variable's type is determined by the context in which the variable is used
+// declare(strict_types)=1; to disable juggling
+$score = 75; // int 75
+$score = '75'; // string "75"
+$x = 2;
+$result = $score * $x;
+var_dump($result); // int(150)
+$score = (int) '75'; // casting
+var_dump($score); // int(75)
