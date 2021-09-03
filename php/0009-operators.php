@@ -71,11 +71,38 @@ var_dump($x || $y);  // true
 var_dump(!$x);             // false
 var_dump(!$y);             // true
 var_dump($x and $y); // false
-$z = $x and $y; // = operator precedes and operator attention!!
+$z = $x and $y; // '=' operator precedes 'and' operator attention!!
 var_dump($z);   // true attention!!
 
+// Arrays + == === != <> !==
+$x = ['a', 'b', 'c'];
+$y = ['d', 'e', 'f', 'g'];
+$z = $x + $y; // already defined keys are not overwritten
+print_r($z); // Array([0]=>a [1]=>b [2]=>c [3]=>g)
 
+$x = ['a' => 1, 'b' => 2];
+$y = ['c' => 1];
+$z = $x + $y;
+print_r($z); //Array([a] => 1[b] => 2[c] => 1)
 
+var_dump($x == $y); // false
+
+$y = ['a' => 1, 'b' => '2'];
+var_dump($x == $y); // true
+var_dump($x === $y); // false
+
+$y = ['b' => 2, 'a' => 1]; // changing the order
+var_dump($x == $y); // true
+var_dump($x === $y); // false
+
+// Operator Precedence
+// https://www.php.net/manual/en/language.operators.precedence.php
+$x = 5 + 3 * 5; // 20
+echo $x."\n";
+
+$x = true;
+$y = false;
+var_dump($x && ! $y); // true
 
 
 
