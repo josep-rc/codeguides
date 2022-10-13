@@ -10,7 +10,7 @@ def es_primo(num):
 
 inicio = time.time()
 
-for n in range(2, 1000):
+for n in range(2, 100000):
     if es_primo(n):
         print(str(n), end="\n")
 
