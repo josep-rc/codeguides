@@ -8,9 +8,9 @@ myName = "Montse";
 var name = "Carla";
 
 function sayName() {
-  // el scope de una variable es su funcion o el objeto global
-  var name2 = "Maria";
-  console.log(name2);
+    // el scope de una variable es su funcion o el objeto global
+    var name2 = "Maria";
+    console.log(name2);
 }
 
 //console.log(name2); // error, name2 is not defined
@@ -33,15 +33,15 @@ cont = 10;
 // el scope de una variable o constante esta definido por los {} donde se define
 
 for (let i = 0; i < todoList.length; i++) {
-  console.log(i);
+    console.log(i);
 }
 
 // console.log(i); // error, i is not defined
 
 // multiline declaration
 let firstName = "Nathan",
-  age = 28,
-  message = "Hello there!";
+    age = 28,
+    message = "Hello there!";
 
 // use destructuring assignment
 const [firstName2, age2, message2] = ["Nathan", 28, "Hello there!"];

@@ -1,7 +1,7 @@
 // old js
 
-function getBook(title, author){
-    return{
+function getBook(title, author) {
+    return {
         title: title,
         author: author
     }
@@ -14,8 +14,8 @@ console.log(book);
 
 // ES6
 
-function getBook2(title, author){
-    return{
+function getBook2(title, author) {
+    return {
         title,
         author
     }
