@@ -43,6 +43,9 @@ https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubunt
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804
 
+### Comandos
+
+Ver puertos activos: `netstat -tln`
 
 
 

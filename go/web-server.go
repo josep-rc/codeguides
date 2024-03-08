@@ -4,7 +4,7 @@
 package main
 
 import (
-	"io"
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -21,7 +21,8 @@ func main() {
 		}
 	*/
 	indexHandler := func(rw http.ResponseWriter, req *http.Request) {
-		log.Fatal(io.WriteString(rw, "Hello, world !!!"))
+		// log.Fatal(io.WriteString(rw, "Hello, world !!!"))
+		fmt.Fprintf(rw, "test")
 	}
 
 	http.HandleFunc("/", indexHandler)
