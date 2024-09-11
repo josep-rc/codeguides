@@ -1,8 +1,7 @@
 <?php
 
-$r = gmp_lcm(120, 25);
-
-var_dump($r);
+$r = gmp_strval(gmp_lcm(120, 25));
+echo $r . "\n";
 
 function descompondre(int $n)
 {
@@ -19,8 +18,6 @@ function descompondre(int $n)
     }
     return $d;
 }
-
-$result = descompondre(100);
 
 function mcd(int $n1, int $n2): int
 {
@@ -47,4 +44,3 @@ function mcm(int $n1, int $n2): int
 }
 
 echo mcm(120,25);
-

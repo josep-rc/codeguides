@@ -22,4 +22,4 @@ while ($r !== 1) {
   }
 }
 echo str_repeat(" ",$num_chars-1);
-echo "1";
+echo "1 |\n";

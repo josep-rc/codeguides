@@ -51,7 +51,7 @@ echo __LINE__ . "\n";       // 10
 $foo  = 'bar';              // dynamic types
 $$foo = 'baz';              // same as $bar = 'baz';
 echo "$foo, {$$foo}\n";     // bar, baz
-echo "$foo, ${$foo}";       // bar, baz
+echo "$foo, {${$foo}}";     // bar, baz
 
 // array
 $data = [1, 2, "Hello", true, 0.8];

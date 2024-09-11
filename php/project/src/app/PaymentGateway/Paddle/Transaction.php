@@ -14,6 +14,4 @@ class Transaction
         var_dump(Transaction::STATUS_PENDING);
         var_dump(self::STATUS_PAID);
     }
-
-
 }

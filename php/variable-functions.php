@@ -7,20 +7,20 @@ class Foo
 
     public function __construct()
     {
-        echo 'construct';
+        echo "construct\n";
     }
 
     function foo(){
-        echo 'foo';
+        echo "foo\n";
     }
 
     static function boo(){
-        echo 'boo';
+        echo "boo\n";
     }
 
     public function __invoke()
     {
-        echo 'invoked';
+        echo "invoked\n";
     }
 }
 
@@ -38,7 +38,7 @@ class Manager{
 
 $m = new Manager();
 $m->executeCallable(function(){
-    echo "hi";
+    echo "hi\n";
 }); // hi
 $m->executeCallable(array('Foo','boo')); // boo
 $m->executeCallable(new Foo()); // construct invoked
